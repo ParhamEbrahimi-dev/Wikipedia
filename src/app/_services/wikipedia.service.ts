@@ -6,4 +6,7 @@ import { Injectable } from '@angular/core';
 export class WikipediaService {
 
   constructor() { }
+  public onSearch(searchItem:string){
+    console.log(searchItem);
+  }
 }
