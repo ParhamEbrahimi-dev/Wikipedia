@@ -9,10 +9,12 @@ import { WikipediaService } from './_services/wikipedia.service';
 })
 export class AppComponent {
   title = 'Wikipedia';
-
+  posts:any[]=[];
   constructor(private wikiService:WikipediaService){}
 
   onGetTermSearch(value:string){
-    this.wikiService.onSearch(value);
+    this.wikiService.onSearch(value).subscribe((res:any)=>{
+      this.posts=res.query.search;
+    });
   }
 }
