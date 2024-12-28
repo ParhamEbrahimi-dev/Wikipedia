@@ -12,7 +12,7 @@
             <td>{{i+1}}</td>
             <td>{{post.title}}</td>
             <td>{{post.wordcount}}</td>
-            <td>{{post.snippet}}</td>
+            <td [innerHTML]="post.snippet"></td>
         </tr>
     </tbody>
 
